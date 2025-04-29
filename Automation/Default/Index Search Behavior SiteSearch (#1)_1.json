@@ -1,0 +1,38 @@
+{
+  "ApiId": "b04564adb5eb5dba053ba8",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "Index Search Behavior SiteSearch (#1)",
+  "Triggers": [
+    {
+      "IsEnabled": true,
+      "TriggerDefId": "RepeatInterval",
+      "Parameters": {
+        "Interval": {
+          "Qty": 24,
+          "Unit": {
+            "Value": "Hours"
+          }
+        }
+      }
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "SearchBoost.IndexBehavior",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "IsDisabled": false,
+      "Parameters": {
+        "BehaviorId": {
+          "Value": 1
+        },
+        "ScopeType": {
+          "Value": "incremental"
+        }
+      }
+    }
+  ],
+  "OnErrorActions": []
+}
