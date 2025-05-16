@@ -1,0 +1,24 @@
+{
+  "id": 24,
+  "globalId": "ed01b08f-977a-479e-bb6e-82cc04c6329e",
+  "namespace": {
+    "id": 4,
+    "globalId": "fed4d65c-e522-4e55-9cb6-a5e2f8f44712",
+    "portalId": 0,
+    "name": "Helper",
+    "isSystem": false
+  },
+  "name": "TipAdresaBadgeSQL",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "declare @Tip nvarchar(10) = '[TknParams:Tip]'\n\nSELECT '<span class=\"badge bg-primary\">' + @Tip + '</span>' AS Badge",
+    "defaultColumn": "Badge",
+    "columns": "",
+    "connectionString": "",
+    "type": "db"
+  }
+}

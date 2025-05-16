@@ -1,0 +1,46 @@
+{
+  "ApiId": "4943308380cdd5b8290a9a",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "Actualizare Client",
+  "Triggers": [
+    {
+      "IsEnabled": true,
+      "TriggerDefId": "OnDbUpdate",
+      "Parameters": {
+        "TableName": {
+          "Value": "app.Client",
+          "IsExpression": false,
+          "Expression": null
+        }
+      }
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "LoadUser",
+      "Description": "",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "IsDisabled": false,
+      "Parameters": {
+        "Id": "1",
+        "Portal": ""
+      }
+    },
+    {
+      "ActionType": "PlantAnApp.ExecuteWorkflow.327f32e4e99f4ae5a29e81b8f4f69d6f",
+      "Description": "",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 1,
+      "IsDisabled": false,
+      "Parameters": {
+        "JSON": "[Row:ModifiedJsonData]",
+        "OnError": [],
+        "ContinueOnError": ""
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

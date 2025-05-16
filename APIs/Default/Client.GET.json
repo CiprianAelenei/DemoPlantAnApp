@@ -1,0 +1,99 @@
+{
+  "Name": "Client",
+  "Description": "Returns the information of a Client record in JSON object format",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 2,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Input": [
+    {
+      "Name": "RecordId",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"RecordId is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.ReadEntity.c9d8b747-0f99-49bc-acd4-5a6b508333e5",
+      "OrderIndex": 0,
+      "Parameters": {
+        "RecordId": "[RecordId]",
+        "OutputToken": "Record"
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "c9d8b747-0f99-49bc-acd4-5a6b508333e5",
+        "IsUidEnabled": "True"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 1,
+      "Parameters": {
+        "HttpCode": "200 OK",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[RecordId]"
+          },
+          {
+            "name": "Finantare",
+            "value": "[Record:Finantare]"
+          },
+          {
+            "name": "Email",
+            "value": "[Record:Email]"
+          },
+          {
+            "name": "Nume",
+            "value": "[Record:Nume]"
+          },
+          {
+            "name": "Prenume",
+            "value": "[Record:Prenume]"
+          },
+          {
+            "name": "Telefon",
+            "value": "[Record:Telefon]"
+          },
+          {
+            "name": "DataColaborare",
+            "value": "[Record:DataColaborare]"
+          },
+          {
+            "name": "Numarproiecte",
+            "value": "[Record:Numarproiecte]"
+          },
+          {
+            "name": "Status",
+            "value": "[Record:Status]"
+          }
+        ],
+        "Headers": []
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

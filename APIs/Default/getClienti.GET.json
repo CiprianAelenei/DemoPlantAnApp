@@ -1,0 +1,59 @@
+{
+  "Name": "getClienti",
+  "Description": "Returns the information of all Client records in JSON object format.",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 3,
+  "CrossDomainPolicy": "Public",
+  "Input": [],
+  "Actions": [
+    {
+      "Description": "",
+      "ActionType": "LoadUser",
+      "OrderIndex": 0,
+      "Parameters": {
+        "Id": "1",
+        "Portal": ""
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "",
+      "ActionType": "PlantAnApp.ReadAllEntity.c9d8b747-0f99-49bc-acd4-5a6b508333e5",
+      "OrderIndex": 1,
+      "Parameters": {
+        "ConnectionString": "",
+        "Where": "",
+        "RowLimit": "",
+        "OrderByClauses": "",
+        "OnError": [],
+        "Cache": "",
+        "OutputToken": "Clienti"
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "",
+      "ActionType": "RawResponse",
+      "OrderIndex": 2,
+      "Parameters": {
+        "Content": "{\"Clienti\" : [Clienti:json]}",
+        "HttpCode": "200 OK",
+        "Headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}

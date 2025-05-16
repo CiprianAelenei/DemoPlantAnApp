@@ -1,0 +1,64 @@
+{
+  "ApiId": "3b4f92a830a4ecec512cbe",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "Notificare Clienti",
+  "Triggers": [
+    {
+      "IsEnabled": true,
+      "TriggerDefId": "OnDbInsert",
+      "Parameters": {
+        "TableName": {
+          "Value": "app.Client",
+          "IsExpression": false,
+          "Expression": null
+        }
+      }
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "SendMail",
+      "Description": "",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "IsDisabled": false,
+      "Parameters": {
+        "From": "",
+        "To": "ciprian.aelenei@ro.post",
+        "DetermineEmail": "",
+        "ToAllUsers": "",
+        "ReplyTo": "",
+        "Cc": "",
+        "Bcc": "",
+        "Subject": "Client Inserted",
+        "Format": {
+          "Value": "Html",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "DnnEmailTemplate": {
+          "Value": null,
+          "IsExpression": false,
+          "Expression": null
+        },
+        "Body": "<p>Buna ziua,&nbsp;</p>\n<p>Un client a fost inserat!&nbsp;</p>\n<p>Salut :)</p>",
+        "PortalFiles": "",
+        "FileToken1": "",
+        "OnError": [],
+        "IgnoreErros": "",
+        "Credentials": {
+          "Group": "",
+          "Entry": "",
+          "IsExpression": false,
+          "Expression": "",
+          "Type": "smtp",
+          "EntireGroup": false
+        },
+        "Headers": []
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

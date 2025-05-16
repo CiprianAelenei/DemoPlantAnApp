@@ -1,0 +1,299 @@
+{
+  "InputFields": [
+    {
+      "Id": 1,
+      "Name": "Subject",
+      "DefaultValue": "",
+      "Type": "Input",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 2,
+      "IsDeleted": false,
+      "Required": false,
+      "Description": null
+    },
+    {
+      "Id": 2,
+      "Name": "Details",
+      "DefaultValue": "",
+      "Type": "Input",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 2,
+      "IsDeleted": false,
+      "Required": false,
+      "Description": null
+    },
+    {
+      "Id": 3,
+      "Name": "FirstName",
+      "DefaultValue": "",
+      "Type": "Input",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 2,
+      "IsDeleted": false,
+      "Required": false,
+      "Description": null
+    },
+    {
+      "Id": 4,
+      "Name": "LastName",
+      "DefaultValue": "",
+      "Type": "Input",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 2,
+      "IsDeleted": false,
+      "Required": false,
+      "Description": null
+    },
+    {
+      "Id": 5,
+      "Name": "Email",
+      "DefaultValue": "",
+      "Type": "Input",
+      "InputType": "Email",
+      "EntityVersionId": null,
+      "WorkflowId": 2,
+      "IsDeleted": false,
+      "Required": false,
+      "Description": null
+    }
+  ],
+  "OutputFields": [
+    {
+      "Id": 6,
+      "Name": "FirstName",
+      "DefaultValue": "[FirstName]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 2,
+      "IsDeleted": false,
+      "Required": false,
+      "Description": null
+    },
+    {
+      "Id": 7,
+      "Name": "LastName",
+      "DefaultValue": "[LastName]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 2,
+      "IsDeleted": false,
+      "Required": false,
+      "Description": null
+    }
+  ],
+  "Id": 2,
+  "GlobalId": "f2b3b1c5-1147-4630-bf92-9bfa96bb1818",
+  "ConfigGenerationGlobalId": "f2b3b1c5-1147-4630-bf92-9bfa96bb1818",
+  "EnvironmentId": 1,
+  "Name": "APIreq",
+  "Description": "",
+  "IsDebug": false,
+  "IsSystem": false,
+  "ActionList": {
+    "Id": 29,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 26,
+        "Description": null,
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "PostData",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 230,
+            "Name": "InputParameters",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 231,
+            "Name": "URL",
+            "Value": "https://first-app.apps.plantanapp.com/api/insert_Ticket?apiKey=b3702e85173943f9b845b7f044953e58",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 232,
+            "Name": "UrlTokenContext",
+            "Value": "Url",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 233,
+            "Name": "UseSSL",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 234,
+            "Name": "Timeout",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 235,
+            "Name": "HttpMethod",
+            "Value": "POST",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 236,
+            "Name": "Data",
+            "Value": "Details=[Details]\nSubject=[Subject]\nFirstName=[FirstName]\nLastName=[LastName]\nEmail=[Email]",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 237,
+            "Name": "DoNotEscapeTokens",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 238,
+            "Name": "DisableReferer",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 239,
+            "Name": "Headers",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 240,
+            "Name": "UseDNNProxySettings",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 241,
+            "Name": "AddCurrentCookies",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 242,
+            "Name": "Events",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 243,
+            "Name": "IgnoreErrors",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 244,
+            "Name": "OnError",
+            "Value": {
+              "Id": 30,
+              "EventName": "error",
+              "Actions": [],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 245,
+            "Name": "OutputParameters",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 246,
+            "Name": "CookieContainerToken",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 247,
+            "Name": "OutputTokenName",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 248,
+            "Name": "OutputHeaders",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_0s4yhtx"
+      }
+    ],
+    "IsInvalid": false
+  },
+  "CreatedBy": 2,
+  "CreatedOn": "2025-05-12T07:35:03.2172682+00:00",
+  "LastModifiedBy": 2,
+  "LastModifiedOn": "2025-05-12T08:10:21.6153565+00:00",
+  "DiagramXML": null,
+  "IsCorrupted": false,
+  "NamespaceUid": "8098259e-211f-491a-b2c3-4f12861210ad"
+}

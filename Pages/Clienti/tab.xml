@@ -24,7 +24,7 @@
             <permissioncode>SYSTEM_TAB</permissioncode>
             <permissionkey>VIEW</permissionkey>
             <allowaccess>true</allowaccess>
-            <rolename>Low-Code Engineer</rolename>
+            <rolename>Users</rolename>
         </permission>
         <permission>
             <permissioncode>SYSTEM_TAB</permissioncode>
@@ -42,19 +42,13 @@
             <permissioncode>SYSTEM_TAB</permissioncode>
             <permissionkey>VIEW</permissionkey>
             <allowaccess>true</allowaccess>
-            <rolename>Managers</rolename>
+            <rolename>Low-Code Engineer</rolename>
         </permission>
         <permission>
             <permissioncode>SYSTEM_TAB</permissioncode>
             <permissionkey>VIEW</permissionkey>
             <allowaccess>true</allowaccess>
-            <rolename>Users</rolename>
-        </permission>
-        <permission>
-            <permissioncode>SYSTEM_TAB</permissioncode>
-            <permissionkey>EDIT</permissionkey>
-            <allowaccess>true</allowaccess>
-            <rolename>Low-Code Engineer</rolename>
+            <rolename>Managers</rolename>
         </permission>
         <permission>
             <permissioncode>SYSTEM_TAB</permissioncode>
@@ -62,11 +56,21 @@
             <allowaccess>true</allowaccess>
             <rolename>Citizen Developers</rolename>
         </permission>
+        <permission>
+            <permissioncode>SYSTEM_TAB</permissioncode>
+            <permissionkey>EDIT</permissionkey>
+            <allowaccess>true</allowaccess>
+            <rolename>Low-Code Engineer</rolename>
+        </permission>
     </tabpermissions>
     <tabsettings>
         <tabsetting>
+            <settingname>CustomStylesheet</settingname>
+            <settingvalue>PageStylesheets/44.css</settingvalue>
+        </tabsetting>
+        <tabsetting>
             <settingname>Pa_IconClass</settingname>
-            <settingvalue>table</settingvalue>
+            <settingvalue>user</settingvalue>
         </tabsetting>
     </tabsettings>
     <tabUrls />

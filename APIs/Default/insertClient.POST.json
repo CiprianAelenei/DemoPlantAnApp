@@ -1,0 +1,78 @@
+{
+  "Name": "insertClient",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Input": [
+    {
+      "Name": "Email",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Nume",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 1,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "Prenume",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 2,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "Description": "",
+      "ActionType": "RunSql",
+      "OrderIndex": 0,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "-- This query inserts a new record into the Client table using the provided email, first name, and last name.\nINSERT INTO app.Client (Email, Nume, Prenume) \nVALUES (@Email, @Nume, @Prenume);",
+        "OnError": [],
+        "ShowErrors": "False",
+        "DbConnector": {
+          "Group": "",
+          "Entry": "",
+          "IsExpression": false,
+          "Expression": "",
+          "Type": "Database",
+          "EntireGroup": false
+        },
+        "BindTokens": [
+          {
+            "name": "Email",
+            "value": "[Email]"
+          },
+          {
+            "name": "Nume",
+            "value": "[Nume]"
+          },
+          {
+            "name": "Prenume",
+            "value": "[Prenume]"
+          }
+        ],
+        "OutputTokenName": "",
+        "ExtractColumns": []
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}

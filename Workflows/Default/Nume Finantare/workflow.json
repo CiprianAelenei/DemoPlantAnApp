@@ -1,0 +1,642 @@
+{
+  "InputFields": [
+    {
+      "Id": 9,
+      "Name": "NumeFinantare",
+      "DefaultValue": "",
+      "Type": "Input",
+      "InputType": "EntityRef",
+      "EntityVersionId": 8,
+      "WorkflowId": 4,
+      "IsDeleted": false,
+      "Required": false,
+      "Description": null
+    },
+    {
+      "Id": 10,
+      "Name": "Email",
+      "DefaultValue": "",
+      "Type": "Input",
+      "InputType": "Email",
+      "EntityVersionId": null,
+      "WorkflowId": 4,
+      "IsDeleted": false,
+      "Required": false,
+      "Description": null
+    }
+  ],
+  "OutputFields": [],
+  "Id": 4,
+  "GlobalId": "6659eda2-3897-41f3-9156-cb0026ed5e25",
+  "ConfigGenerationGlobalId": "6659eda2-3897-41f3-9156-cb0026ed5e25",
+  "EnvironmentId": 1,
+  "Name": "Nume Finantare",
+  "Description": "Nume Finantare",
+  "IsDebug": false,
+  "IsSystem": false,
+  "ActionList": {
+    "Id": 36,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 30,
+        "Description": "Split",
+        "ActionErrorMessage": "",
+        "Condition": "",
+        "ActionType": "PlantAnApp.ExecuteConditionally",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 265,
+            "Name": "ConditionedActions",
+            "Value": [
+              {
+                "Condition": {
+                  "IsExpression": false,
+                  "Expression": "",
+                  "Value": "[Finantare:Id] == 3"
+                },
+                "Actions": {
+                  "Id": 37,
+                  "EventName": "click",
+                  "Actions": [
+                    {
+                      "Id": 31,
+                      "Description": "Aprobat",
+                      "ActionErrorMessage": null,
+                      "Condition": null,
+                      "ActionType": "SendMail",
+                      "OrderIndex": 0,
+                      "ActionParameters": [
+                        {
+                          "Id": 267,
+                          "Name": "From",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 268,
+                          "Name": "To",
+                          "Value": "[Email]",
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 269,
+                          "Name": "DetermineEmail",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 270,
+                          "Name": "ToAllUsers",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 271,
+                          "Name": "ReplyTo",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 272,
+                          "Name": "Cc",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 273,
+                          "Name": "Bcc",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 274,
+                          "Name": "Subject",
+                          "Value": "Finantare Aprobata",
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 275,
+                          "Name": "Format",
+                          "Value": "Html",
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 276,
+                          "Name": "DnnEmailTemplate",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 277,
+                          "Name": "Body",
+                          "Value": "<p>[Finantare:NumeFinantare]</p>",
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 278,
+                          "Name": "PortalFiles",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 279,
+                          "Name": "FileToken1",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 280,
+                          "Name": "OnError",
+                          "Value": {
+                            "Id": 38,
+                            "EventName": "OnError",
+                            "Actions": [],
+                            "IsInvalid": false
+                          },
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 281,
+                          "Name": "IgnoreErros",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 282,
+                          "Name": "Credentials",
+                          "Value": {
+                            "Entry": "",
+                            "Group": "",
+                            "EntireGroup": false,
+                            "Type": "smtp",
+                            "IsExpression": false,
+                            "Expression": ""
+                          },
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 283,
+                          "Name": "Headers",
+                          "Value": [],
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 31,
+                          "OrderIndex": 0
+                        }
+                      ],
+                      "DiagramUID": "Activity_0mc6irf"
+                    }
+                  ],
+                  "IsInvalid": false
+                }
+              },
+              {
+                "Condition": {
+                  "IsExpression": false,
+                  "Expression": "",
+                  "Value": "[Finantare:Id] == 2"
+                },
+                "Actions": {
+                  "Id": 39,
+                  "EventName": "click",
+                  "Actions": [
+                    {
+                      "Id": 32,
+                      "Description": "In curs",
+                      "ActionErrorMessage": null,
+                      "Condition": null,
+                      "ActionType": "SendMail",
+                      "OrderIndex": 0,
+                      "ActionParameters": [
+                        {
+                          "Id": 286,
+                          "Name": "From",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 287,
+                          "Name": "To",
+                          "Value": "[Email]",
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 288,
+                          "Name": "DetermineEmail",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 289,
+                          "Name": "ToAllUsers",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 290,
+                          "Name": "ReplyTo",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 291,
+                          "Name": "Cc",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 292,
+                          "Name": "Bcc",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 293,
+                          "Name": "Subject",
+                          "Value": "Finantare in curs",
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 294,
+                          "Name": "Format",
+                          "Value": "Html",
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 295,
+                          "Name": "DnnEmailTemplate",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 296,
+                          "Name": "Body",
+                          "Value": "<p>[Finantare:NumeFinantare]</p>",
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 297,
+                          "Name": "PortalFiles",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 298,
+                          "Name": "FileToken1",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 299,
+                          "Name": "OnError",
+                          "Value": {
+                            "Id": 40,
+                            "EventName": "OnError",
+                            "Actions": [],
+                            "IsInvalid": false
+                          },
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 300,
+                          "Name": "IgnoreErros",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 301,
+                          "Name": "Credentials",
+                          "Value": {
+                            "Entry": "",
+                            "Group": "",
+                            "EntireGroup": false,
+                            "Type": "smtp",
+                            "IsExpression": false,
+                            "Expression": ""
+                          },
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 302,
+                          "Name": "Headers",
+                          "Value": [],
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 32,
+                          "OrderIndex": 0
+                        }
+                      ],
+                      "DiagramUID": "Activity_1hmni89"
+                    }
+                  ],
+                  "IsInvalid": false
+                }
+              },
+              {
+                "Condition": {
+                  "IsExpression": false,
+                  "Expression": "",
+                  "Value": "[Finantare:Id] == 4"
+                },
+                "Actions": {
+                  "Id": 41,
+                  "EventName": "click",
+                  "Actions": [
+                    {
+                      "Id": 33,
+                      "Description": "Neaprobat",
+                      "ActionErrorMessage": null,
+                      "Condition": null,
+                      "ActionType": "SendMail",
+                      "OrderIndex": 0,
+                      "ActionParameters": [
+                        {
+                          "Id": 305,
+                          "Name": "From",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 306,
+                          "Name": "To",
+                          "Value": "[Email]",
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 307,
+                          "Name": "DetermineEmail",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 308,
+                          "Name": "ToAllUsers",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 309,
+                          "Name": "ReplyTo",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 310,
+                          "Name": "Cc",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 311,
+                          "Name": "Bcc",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 312,
+                          "Name": "Subject",
+                          "Value": "Finantare neaprobata",
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 313,
+                          "Name": "Format",
+                          "Value": "Html",
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 314,
+                          "Name": "DnnEmailTemplate",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 315,
+                          "Name": "Body",
+                          "Value": "<p>[Finantare:NumeFinantare]</p>",
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 316,
+                          "Name": "PortalFiles",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 317,
+                          "Name": "FileToken1",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 318,
+                          "Name": "OnError",
+                          "Value": {
+                            "Id": 42,
+                            "EventName": "OnError",
+                            "Actions": [],
+                            "IsInvalid": false
+                          },
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 319,
+                          "Name": "IgnoreErros",
+                          "Value": null,
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 320,
+                          "Name": "Credentials",
+                          "Value": {
+                            "Entry": "",
+                            "Group": "",
+                            "EntireGroup": false,
+                            "Type": "smtp",
+                            "IsExpression": false,
+                            "Expression": ""
+                          },
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 321,
+                          "Name": "Headers",
+                          "Value": [],
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 33,
+                          "OrderIndex": 0
+                        }
+                      ],
+                      "DiagramUID": "Activity_1pd1n3m"
+                    }
+                  ],
+                  "IsInvalid": false
+                }
+              }
+            ],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 30,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Gateway_1fwdyf2"
+      }
+    ],
+    "IsInvalid": false
+  },
+  "CreatedBy": 2,
+  "CreatedOn": "2025-05-14T06:38:08.0037147+00:00",
+  "LastModifiedBy": 2,
+  "LastModifiedOn": "2025-05-14T07:32:02.9308192+00:00",
+  "DiagramXML": null,
+  "IsCorrupted": false,
+  "NamespaceUid": "8098259e-211f-491a-b2c3-4f12861210ad"
+}
